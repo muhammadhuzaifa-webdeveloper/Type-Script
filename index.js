@@ -1,9 +1,119 @@
 "use strict";
-let emp = {
-    name: "Huzaifa",
-    employesId: 14488905834565698686462586529627659572,
-};
-console.log(emp);
+// ----Classs------------------------
+class Brand {
+    brand;
+    model;
+    constructor(brand, model) {
+        this.brand = brand;
+        this.model = model;
+    }
+}
+const brand = new Brand("Toyota", 2020);
+console.log(brand);
+// ------------------------------------
+// class Person{
+//     name:string;
+//     age:number;
+//     constructor(name:string,age:number){
+//         this.name =name;
+//         this.age = age;
+//     }
+//       greet():void{
+//         console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+//       }
+// }
+// const person = new Person("Huzii",15)
+// console.log(person);
+// ------------------Enums----------------------------
+// ---------------------------------------------------
+// function multiply(a: number, b: number = 2): number {
+//   return a * b;
+// }
+// console.log(multiply(5));   // 10
+// console.log(multiply(5, 3)); // 15
+// ----------------------------------------------
+// function greet(name?: string): string {
+//   return `Hello, ${name ?? "Guest"}`;
+// }
+// console.log(greet());
+// console.log(greet("Umair"));
+// ----------------------------------------/
+// function logmsg(msg :string): void {
+//     console.log(msg);
+// }
+// -----------------------------------
+// enum clors {
+//     Red,
+//     blue,
+//     green,
+//     Yellow,
+// }
+// console.log(clors.Red);
+// console.log(clors[0]);
+// --------------------------------------------
+// const enum loglevel {
+//     info,
+//     warning,
+//     Error,
+// }
+// const info:loglevel = loglevel.info;
+// const warning:loglevel = loglevel.warning;
+// const error:loglevel = loglevel.Error;
+// console.log(info);
+// console.log(warning);
+// console.log(error);
+// --------------Basic Enums------------------------------
+// enum Direction {
+//     Up,
+//     Down,
+//     Right,
+//     Left,
+// }
+// let move:Direction = Direction.left;
+// console.log(move)  ;
+// -----------Object and interface in TytpeScript----------------------------------------------------
+// -----------------------Index signature-----------------------------
+// interface Ditionary {
+//     [key: string]: string,
+// }
+// let user: Ditionary = {
+//     red: "90248924809",
+//     green: "90248924809",
+//     blue: "90248924809",
+// }
+// console.log(user.red)
+// console.log(user.green)
+// console.log(user.blue)
+// //--------------------Intersection Types--------------------
+// interface UserName {
+//     name :string,
+// }
+// interface UserAge {
+//     age :number,
+// }
+// interface UserEmail {
+//     email:string,
+// }
+// type PersonalDetail = UserName & UserAge & UserEmail;
+// let user :PersonalDetail ={
+//     name:"Huzaifa",
+//     age:15,
+//     email:"huzaifa@gmail.com",
+// }
+// console.log(user)
+// console.log(user.email)
+//-------------Extending Interface----------------------------
+// interface User {
+//     name:string,
+// }
+// interface userDetails extends User {
+//      employesId:number,
+// }
+// let emp :userDetails ={
+//     name:"Huzaifa",
+//     employesId:14488905834565698686462586529627659572,
+// }
+// console.log(emp)
 // ----------------------Readonly Property-----------------------------
 // interface User {
 //     name: String,

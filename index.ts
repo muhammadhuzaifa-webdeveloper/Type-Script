@@ -1,7 +1,142 @@
+// ----Classs------------------------
+
+// --------------------Acess Modifiers----------------------------
+class BankAccount {
+    public owner:string;
+    private balance : number;
+    protected accountType :string;
+    readonly accountId :string;
+
+    constructor(owner:string ,  balance : number ,accountType :string ,accountId :string  ){
+        this.owner = owner;
+        this.balance = balance;
+        this.accountType = accountType;
+        this.accountId = accountId;
+    }
+}
+
+
+
+
+
+// \\\---------------------------------------------
+// class Brand{
+//     brand:string;
+//     model:number;
+//     constructor(brand:string,model:number){
+//         this.brand =brand;
+//         this.model = model;
+//     }
+    
+// }
+// const brand = new Brand("Toyota", 2020)
+// console.log(brand);
+// ------------------------------------
+// class Person{
+//     name:string;
+//     age:number;
+//     constructor(name:string,age:number){
+//         this.name =name;
+//         this.age = age;
+//     }
+//       greet():void{
+//         console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+//       }
+// }
+// const person = new Person("Huzii",15)
+// console.log(person);
+
+// ------------------Enums----------------------------
+
+// ---------------------------------------------------
+// function multiply(a: number, b: number = 2): number {
+//   return a * b;
+// }
+
+// console.log(multiply(5));   // 10
+// console.log(multiply(5, 3)); // 15
+
+// ----------------------------------------------
+// function greet(name?: string): string {
+//   return `Hello, ${name ?? "Guest"}`;
+// }
+
+// console.log(greet());
+// console.log(greet("Umair"));
+// ----------------------------------------/
+
+// function logmsg(msg :string): void {
+//     console.log(msg);
+// }
+
+
+// -----------------------------------
+// enum clors {
+//     Red,
+//     blue,
+//     green,
+//     Yellow,
+// }
+// console.log(clors.Red);
+// console.log(clors[0]);
+// --------------------------------------------
+
+// const enum loglevel {
+//     info,
+//     warning,
+//     Error,
+// }
+// const info:loglevel = loglevel.info;
+// const warning:loglevel = loglevel.warning;
+// const error:loglevel = loglevel.Error;
+// console.log(info);
+// console.log(warning);
+// console.log(error);
+
+
+// --------------Basic Enums------------------------------
+// enum Direction {
+//     Up,
+//     Down,
+//     Right,
+//     Left,
+// }
+// let move:Direction = Direction.left;
+// console.log(move)  ;
+
+
 // -----------Object and interface in TytpeScript----------------------------------------------------
-//--------------------
+// -----------------------Index signature-----------------------------
+// interface Ditionary {
+//     [key: string]: string,
+// }
+// let user: Ditionary = {
+//     red: "90248924809",
+//     green: "90248924809",
+//     blue: "90248924809",
+// }
+// console.log(user.red)
+// console.log(user.green)
+// console.log(user.blue)
+// //--------------------Intersection Types--------------------
+// interface UserName {
+//     name :string,
+// }
+// interface UserAge {
+//     age :number,
+// }
+// interface UserEmail {
+//     email:string,
+// }
+// type PersonalDetail = UserName & UserAge & UserEmail;
 
-
+// let user :PersonalDetail ={
+//     name:"Huzaifa",
+//     age:15,
+//     email:"huzaifa@gmail.com",
+// }
+// console.log(user)
+// console.log(user.email)
 //-------------Extending Interface----------------------------
 // interface User {
 //     name:string,
