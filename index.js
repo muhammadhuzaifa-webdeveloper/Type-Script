@@ -1,16 +1,99 @@
 "use strict";
-// -------------------Generic Class ---------------------------
-class Box {
-    content;
-    constructor(content) {
-        this.content = content;
+let person = { name: "Sara", age: 30 };
+const anotherPerson = { name: "Umair", age: 26 };
+function getProperty(obj, key) {
+    return obj[key];
+}
+const user = { id: 1, name: "Ali", age: 25 };
+console.log(getProperty(user, "name")); // Ali
+//---------------------------------
+function printLength(value) {
+    if (value) {
+        console.log(value.length); // narrowed to string
+    }
+    else {
+        console.log("No value");
     }
 }
-const student = new Box("Huzaifa");
-const student2 = new Box("Huzaifa");
-console.log(student.content);
-console.log(student2.content);
-// ----Classs------------------------
+// ------------------------------------------------
+// interface Car {
+//   brand: string;
+//   drive(): void;
+// }
+// interface Bike {
+//   brand: string;
+//   ride(): void;
+// }
+// function isCar(vehicle: Car | Bike): vehicle is Car {
+//   return (vehicle as Car).drive !== undefined;
+// }
+// function useVehicle(vehicle: Car | Bike) {
+//   if (isCar(vehicle)) {
+//     vehicle.drive();
+//   } else {
+//     vehicle.ride();
+//   }
+// }
+// ---------------------------------------
+// let value: string | number;
+// value = "Hello";
+// value = 42;
+// // value = true; ❌ Erro
+// ----------Api responsing Handling-------------------
+// interface ApiResponse<T> {
+//   data: T;
+//   status: number;
+// }
+// const userResponse: ApiResponse<{ name: string; age: number }> = {
+//   data: { name: "Umair", age: 26 },
+//   status: 200,
+// };
+// console.log(userResponse.data.name); // Umair
+// -----Practical usecase-----------------------------
+// class Stack<T> {
+//   private items: T[] = [];
+//   push(item: T): void {
+//     this.items.push(item);
+//   }
+//   pop(): T | undefined {
+//     return this.items.pop();
+//   }
+// }
+// const numberStack = new Stack<number>();
+// numberStack.push(1);
+// numberStack.push(2);
+// console.log(numberStack.pop()); // 2
+// -------------------default type parameter----------------------
+// function createArray<T = string>(length: number, value: T): T[] {
+//   return Array(length).fill(value);
+// }
+// console.log(createArray(3, "Hello")); // ["Hello", "Hello", "Hello"]
+// console.log(createArray<number>(3, 5)); // [5, 5, 5]
+// ----------Multiple types perameter--------------------------
+// function pair<K, V>(key: K, value: V): [K, V] {
+//   return [key, value];
+// }
+// const result = pair<string, number>("Age", 26);
+// console.log(result); // ["Age", 26]
+// -----------------------Generic Contraints----------------------
+// interface Lengthwise {
+//   length: number;
+// }
+// function logLength<T extends Lengthwise>(item: T): void {
+//   console.log(item.length);
+// }
+// logLength("Hello");       // 5
+// logLength([1, 2, 3]);     // 3
+// // logLength(42); ❌ Error (number has no length)
+// -------------------Generic Class ---------------------------
+// class Box<T>{
+//     constructor (public content:T){}
+// }
+// const student = new Box <string>("Huzaifa");
+// const student2 = new Box <string>("Huzaifa");
+// console.log(student.content)
+// console.log(student2.content)
+// // ----Classs------------------------
 // --------------------Acess Modifiers----------------------------
 // class BankAccount {
 //     public owner:string;
@@ -35,7 +118,7 @@ console.log(student2.content);
 // }
 // const brand = new Brand("Toyota", 2020)
 // console.log(brand);
-    // ------------------------------------
+// ------------------------------------
 // class Person{
 //     name:string;
 //     age:number;
