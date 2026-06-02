@@ -1,16 +1,41 @@
 "use strict";
-// ----Classs------------------------
-class Brand {
-    brand;
-    model;
-    constructor(brand, model) {
-        this.brand = brand;
-        this.model = model;
+// -------------------Generic Class ---------------------------
+class Box {
+    content;
+    constructor(content) {
+        this.content = content;
     }
 }
-const brand = new Brand("Toyota", 2020);
-console.log(brand);
-// ------------------------------------
+const student = new Box("Huzaifa");
+const student2 = new Box("Huzaifa");
+console.log(student.content);
+console.log(student2.content);
+// ----Classs------------------------
+// --------------------Acess Modifiers----------------------------
+// class BankAccount {
+//     public owner:string;
+//     private balance : number;
+//     protected accountType :string;
+//     readonly accountId :string;
+//     constructor(owner:string ,  balance : number ,accountType :string ,accountId :string  ){
+//         this.owner = owner;
+//         this.balance = balance;
+//         this.accountType = accountType;
+//         this.accountId = accountId;
+//     }
+// }
+// \\\---------------------------------------------
+// class Brand{
+//     brand:string;
+//     model:number;
+//     constructor(brand:string,model:number){
+//         this.brand =brand;
+//         this.model = model;
+//     }
+// }
+// const brand = new Brand("Toyota", 2020)
+// console.log(brand);
+    // ------------------------------------
 // class Person{
 //     name:string;
 //     age:number;

@@ -1,24 +1,32 @@
-// ----Classs------------------------
+
+
+
+
+
+// -------------------Generic Class ---------------------------
+// class Box<T>{
+//     constructor (public content:T){}
+// }
+// const student = new Box <string>("Huzaifa");
+// const student2 = new Box <string>("Huzaifa");
+// console.log(student.content)
+// console.log(student2.content)
+// // ----Classs------------------------
 
 // --------------------Acess Modifiers----------------------------
-class BankAccount {
-    public owner:string;
-    private balance : number;
-    protected accountType :string;
-    readonly accountId :string;
+// class BankAccount {
+//     public owner:string;
+//     private balance : number;
+//     protected accountType :string;
+//     readonly accountId :string;
 
-    constructor(owner:string ,  balance : number ,accountType :string ,accountId :string  ){
-        this.owner = owner;
-        this.balance = balance;
-        this.accountType = accountType;
-        this.accountId = accountId;
-    }
-}
-
-
-
-
-
+//     constructor(owner:string ,  balance : number ,accountType :string ,accountId :string  ){
+//         this.owner = owner;
+//         this.balance = balance;
+//         this.accountType = accountType;
+//         this.accountId = accountId;
+//     }
+// }
 // \\\---------------------------------------------
 // class Brand{
 //     brand:string;
